@@ -47,12 +47,12 @@ function guessMatch (character) {
     if (character === computerGuess) {
         wins = wins + 1;
         showWins();
-        //toggleGame();
+        resetVariables();
 
     } else if (guessesLeft === 0) {
         losses = losses + 1; 
         showLosses();
-        resetVariables ();
+        resetVariables();
 
     } else {
         guessesLeft = guessesLeft - 1;
@@ -60,12 +60,10 @@ function guessMatch (character) {
     }
 }
 
-//function to show wins
 function showWins() {
     document.getElementById("numWins").innerHTML = wins;
 }
 
-//function to show guesses remaining
 function showGuessesRemaining() {
     document.getElementById("numGuesses").innerHTML = guessesLeft;
 } 
